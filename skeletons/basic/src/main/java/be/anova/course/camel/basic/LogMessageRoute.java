@@ -30,7 +30,7 @@ public class LogMessageRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-   	  
+   	  from("timer:test").to("log:test");
         //TODO: implement your Camel routes here if you choose the Java DSL
         //      - timer: -> processor (add timetamp) -> log:
         //      - file: -> processor (write to log) --> file:
